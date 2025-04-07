@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            console.log( $('.box1').html() )
+            console.log( $('.btn').text() )
+
+            $('.btn').on('click', function(){
+               /*  let condition = $(this).hasClass('active') */
+                if($(this).hasClass('active')){
+
+                    $(this).removeClass('active')
+                }else{
+                    $(this).children('span').html('<strong>닫기</strong>')
+                    $(this).addClass('active')
+                }
+            })
+            
+        })
+    </script>
+
+    <style>
+        /* 스타일에 부여 */
+        .btn{background-color: lightgray;}
+        .btn.active{background-color: skyblue;}
+    </style>
+
+</head>
+<body>
+    <!-- 474 text() html() -->
+
+    <div class="box1">박스1</div>
+    <button type="button" class="btn">
+        <!-- 주석 -->
+        <span>전체메뉴열기</span>
+    </button>
+</body>
+</html>

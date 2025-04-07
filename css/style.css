@@ -1,0 +1,212 @@
+/**
+-----------------------------------------------------------------
+폰트
+------------------------------------------------------------------
+**/
+
+    @font-face { font-family: 'IBM Plex Sans KR Regular'; font-style: normal; font-weight: 400; src: local('IBM Plex Sans KR Regular'), url('IBMPlexSansKR-Regular.woff') format('woff'); }
+    @font-face { font-family: 'IBM Plex Sans KR Thin'; font-style: normal; font-weight: 400; src: local('IBM Plex Sans KR Thin'), url('IBMPlexSansKR-Thin.woff') format('woff'); }
+    @font-face { font-family: 'IBM Plex Sans KR ExtraLight'; font-style: normal; font-weight: 400; src: local('IBM Plex Sans KR ExtraLight'), url('IBMPlexSansKR-ExtraLight.woff') format('woff'); }
+    @font-face { font-family: 'IBM Plex Sans KR Light'; font-style: normal; font-weight: 400; src: local('IBM Plex Sans KR Light'), url('IBMPlexSansKR-Light.woff') format('woff'); }
+    @font-face { font-family: 'IBM Plex Sans KR Medium'; font-style: normal; font-weight: 400; src: local('IBM Plex Sans KR Medium'), url('IBMPlexSansKR-Medium.woff') format('woff'); }
+    @font-face { font-family: 'IBM Plex Sans KR SemiBold'; font-style: normal; font-weight: 500; src: local('IBM Plex Sans KR SemiBold'), url('IBMPlexSansKR-SemiBold.woff') format('woff'); }
+    @font-face { font-family: 'IBM Plex Sans KR Bold'; font-style: normal; font-weight: 400; src: local('IBM Plex Sans KR Bold'), url('IBMPlexSansKR-Bold.woff') format('woff'); }
+  
+
+
+
+
+/*================================================
+초기화
+=================================================*/
+
+body { line-height: 1.5; letter-spacing: 0px; color: #000; }
+
+body,header,div,ul,li,h1,h2,h3,h4,h5,h6,p,img,a,nav.section,footer,form,input,label,button{margin: 0; padding: 0; border: none;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+img {vertical-align: middle;}
+
+
+
+
+/*============================================
+header 부분
+==============================================*/
+
+header{background-color: #000; min-height: 223px; position: relative;}
+header.on{min-height: 400px;}
+
+header h1{text-indent: -9999px;}
+
+/* .util-upper 부분 */
+header .util-upper{position: absolute; right: 50px; top: 20px;}
+header .util-upper .upper{display: flex; gap: 20px;}
+header .util-upper .upper li{}
+header .util-upper .upper li a{color: white; font-size: 10px; font-family: 'IBM Plex Sans KR Medium';}
+header .util-upper .upper li a::after{display: block; content: ""; clear: both; height: 2px; width: 0; background-color: white; transition: all 0.3s ease;}
+header .util-upper .upper li a:hover{color: #dd592d; font-weight: 600;}
+header .util-upper .upper li a:hover::after{background-color: #dd592d; width: 100%;}
+
+/* logo */
+header h1.logo { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background: url(../img/img-logo.png) no-repeat center center; width: 238px; height: 30px;}
+
+/* util-icon */
+header .util-icon { position: absolute; top: 70px; right: 50px; display: flex; gap: 20px; }
+header .util-icon a{height: 30px;}
+
+/* ul.menu */
+header .menu-wrap{position: absolute; top: 174px; left: 50%; transform: translateX(-50%);}
+header .menu-wrap .menu{display: flex; gap: 64px;}
+header .menu-wrap .menu > li{position: relative; white-space: nowrap;  /* padding: 10px 26px; */}
+header .menu-wrap .menu > li:hover{color: #000; z-index: 1;}
+header .menu-wrap .menu > li::before { display: block; background-color: white; content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 0; transition-property: height; transition-duration: 0.3s; z-index: -1; border-radius: 22px 22px 0 0; }
+header .menu-wrap .menu > li:hover::before{height: 100%;}
+header .menu-wrap .menu > li > a { color: #fff; font-size: 20px; font-family: 'IBM Plex Sans KR Semibold'; transition-property: color; transition-duration: calc(100%); display: inline-block; padding: 10px 26px;}
+header .menu-wrap .menu > li > a:hover{ color: #000; z-index: 1; }
+header .menu-wrap .menu li > .quick-menu{ position: absolute; top: 48px; left:-1720px; white-space: nowrap;  display: none; }
+
+
+
+header .menu-wrap .menu li > .quick-menu.on{display: block;}
+
+header .menu-wrap .menu li > .quick-menu > .in{}
+
+header .menu-wrap .menu li > .quick-menu .depth2{display: flex; justify-content: space-between; flex-direction: row; gap: 100px; text-align: center; padding: 23px 1080px; background-color: #fff; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.250);}
+
+header .menu-wrap .menu li > .quick-menu .depth2 li.item{border-radius: 20px; text-align: center; width: 256px; height: 95px; transition-property: width, height; transition-duration: 0.3s, 0.3s; }
+header .menu-wrap .menu li > .quick-menu .depth2 li.item:hover{width: 270px; height: 110px;}
+header .menu-wrap .menu li > .quick-menu .depth2 li.item-1{background: url(../img/img-protein-head.png) no-repeat center center; }
+header .menu-wrap .menu li > .quick-menu .depth2 li.item-2{background: url(../img/img-vitamin.png) no-repeat center center; }
+header .menu-wrap .menu li > .quick-menu .depth2 li.item-3{background: url(../img/img-bar.png) no-repeat center center; }
+header .menu-wrap .menu li > .quick-menu .depth2 li.item-4{background: url(../img/img-sportswear.png) no-repeat center center; }
+header .menu-wrap .menu li > .quick-menu .depth2 li.item-5{background: url(../img/img-support_drink.png) no-repeat center center; }
+header .menu-wrap .menu li > .quick-menu .depth2 li a{font-family: 'IBM Plex Sans KR Medium'; font-size: 20px; padding: 32px 60px; display: inline-block; color: #fff;}
+
+/* .search-wrap */
+header .search-wrap{position: absolute; top: 117px; left: 50%; transform: translateX(-50%); background-color: #CDCDCD; width:535px; height: 40px; border-radius: 10px;}
+header .search-wrap .search{display: flex; justify-content: space-between; width: 515px; height: 24px; background-color: #fff; border-radius: 24px; margin-top: 8px; margin-left: 10px; margin-right: 10px; align-items: center;}
+header .search-wrap .search input{box-sizing: border-box; border-radius: 20px 0 0 20px; overflow: hidden; vertical-align: middle; text-align: center; font-family: 'IBM Plex Sans KR Medium'; font-size: 12px; color: #a8a8a8; width: 493px;}
+header .search-wrap .search button{margin: 10px; text-indent: -9999px; background: url(../img/ico-Search.png) no-repeat center center; width: 20px; height: 20px; cursor: pointer;}
+
+
+
+
+
+/* ===================================================
+section-1 부분
+======================================================== */
+
+
+/* blankspace */
+
+/* #section-1 .blankspace { background-color: #fff; width: 100%; min-height: 141px; } */
+
+#section-1 {margin-top: 4px; background-color: #ffffff; }
+
+/* sec-wrap */
+#section-1 .sec-wrap {}
+#section-1 .sec-head-wrap{width: 1740px; margin: 0 auto; display: flex; justify-content: space-between; padding-top: 30px;}
+#section-1 .sec-head-wrap .title{font-family: 'IBM Plex Sans KR Semibold'; font-size: 36px;}
+#section-1 .sec-head-wrap .more { display: flex; justify-content: space-between; gap: 17px; align-items: center; }
+#section-1 .sec-head-wrap .more span { font-family: 'IBM Plex Sans KR Regular'; font-size: 16px; }
+#section-1 .sec-head-wrap .more a { background: url(../img/ico-Arrow.png) no-repeat center center; background-size: 30px 30px; width: 30px; height: 30px; }
+
+/* 광고 영역 */
+
+#section-1 .sec-option { width: 1740px; margin: 0 auto; padding-top: 30px; padding-bottom: 30px; display: flex; flex-direction: row; gap: 215px; justify-content: space-between; align-items: center; }
+#section-1 .sec-option .event { display: flex; flex-direction: column; gap: 30px; justify-content: space-between; }
+#section-1 .sec-option .event .ad-1 a{background: url(../img/img-ad-1.png) no-repeat center center; background-size: 878px 288px; width: 878px; height:288px; border-radius: 50px; display: inline-block; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.250); }
+#section-1 .sec-option .event .ad-2 a{background: url(../img/img-ad-2.png) no-repeat center center; background-size: 878px 288px; width: 878px; height:288px; border-radius: 50px; display: inline-block; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.250); }
+
+/* 혜택 영역 */
+#section-1 .sec-option .bonus{}
+#section-1 .sec-option .bonus .bonus-1{display: flex; flex-direction: row; justify-content: space-between; gap: 40px;}
+#section-1 .sec-option .bonus .bonus-1 li{background-color: #fff; border-radius: 50px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.250); width: 292px; height:210px;  padding: 20px; box-sizing: border-box; position: relative;}
+
+#section-1 .sec-option .bonus .bonus-1 li:nth-child(1){
+    background: url(../img/ico-free_post.png) no-repeat right 20px bottom 20px;
+}
+
+#section-1 .sec-option .bonus .bonus-1 li:nth-child(2) span{
+    position: absolute; right: 20px; bottom: 20px; 
+    width:90px; height: 90px;
+    background: url(../img/ico-Coin_in_Hand.png) no-repeat ;
+}
+
+#section-1 .sec-option .bonus .bonus-1 li h2{font-family: 'IBM Plex Sans KR Bold'; font-size: 32px; }
+#section-1 .sec-option .bonus .bonus-1 li p{font-family: 'IBM Plex Sans KR Regular'; font-size: 16px; margin-top: 10px; display: inline-block;}
+#section-1 .sec-option .bonus .bonus-1 li p span{font-family: 'IBM Plex Sans KR SemiBold';}
+#section-1 .sec-option .bonus .bonus-1 li img{/* position: absolute; right: 20px; bottom: 20px; */}
+
+#section-1 .sec-option .bonus .bonus-2{display: flex; flex-direction: row; justify-content: space-between; gap: 40px; margin-top: 30px;}
+#section-1 .sec-option .bonus .bonus-2 li{background-color: #fff; border-radius: 50px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.250); width: 292px; height:210px; position: relative; }
+#section-1 .sec-option .bonus .bonus-2 li h2{font-family: 'IBM Plex Sans KR Bold'; font-size: 32px; margin-left: 20px; margin-top: 20px;}
+#section-1 .sec-option .bonus .bonus-2 li p{font-family: 'IBM Plex Sans KR Regular'; font-size: 16px; margin-left: 20px; margin-top: 10px; display: inline-block;}
+#section-1 .sec-option .bonus .bonus-2 li img{position: absolute; right: 20px; bottom: 20px;}
+
+
+
+
+/* =================================================
+section-2 영역
+==================================================== */
+
+#section-2{ background-color: #fff; box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.250);}
+#section-2 .sec2-head-wrap{ margin: 0 auto; width: 1740px; padding-top: 40px; padding-bottom: 56px; overflow: hidden;}
+/* .sec2-head 영역 */
+#section-2 .sec2-head-wrap .sec2-head{ display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 25px; }
+#section-2 .sec2-head-wrap .sec2-head span{ font-family: 'IBM Plex Sans KR SemiBold'; font-size: 48px; }
+#section-2 .sec2-head-wrap > p{ font-family: 'IBM Plex Sans KR Regular'; font-size: 24px; color: #8C8C8C; text-align: center; margin-top: 5px; }
+#section-2 .sec2-head-wrap p span{ color: #dd592d; }
+/* #list-main 영역 */
+#section-2 .sec2-head-wrap #list-main { display: flex; gap: 50px; font-family: 'IBM Plex Sans KR Regular'; font-size: 20px; justify-content: center; margin-top: 40px; margin-bottom: 68px;}
+#section-2 .sec2-head-wrap #list-main li{ position: relative; }
+#section-2 .sec2-head-wrap #list-main li::before{ position:absolute; bottom: 0; display: block; content:""; width: 0; height: 3px; background-color: #dd592d; transition-property: width; transition-duration: 0.3s;}
+#section-2 .sec2-head-wrap #list-main li a:hover{ color: #dd592d; font-family: 'IBM Plex Sans KR Bold'; font-size: 20px; }
+#section-2 .sec2-head-wrap #list-main li:hover::before{ width: 100%; }
+
+/* #list-sub 영역 */
+#section-2 .sec2-head-wrap > #list-sub{display: flex; gap: 40px; justify-content: center; }
+#section-2 .sec2-head-wrap > #list-sub .banner{border-radius: 0 0 20px 20px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.250); position: relative; /* padding-bottom: 29px; */}
+#section-2 .sec2-head-wrap > #list-sub .banner .banner-link{display: block; width: 100%; height: 100%; padding-bottom: 29px; box-sizing: border-box; /* padding: 20px 20px 29px 20px; box-sizing: border-box; */}
+#section-2 .sec2-head-wrap > #list-sub .banner .banner-link img{}
+#section-2 .sec2-head-wrap > #list-sub .banner .banner-link .banner-name{ font-family: 'IBM Plex Sans KR SemiBold'; font-size: 24px; margin-top: 10px; text-align: center;}
+#section-2 .sec2-head-wrap > #list-sub .banner .banner-link .banner-ex{ font-family: 'IBM Plex Sans KR Regular'; font-size: 12px; color: #575757; text-align: center;}
+#section-2 .sec2-head-wrap > #list-sub .banner .banner-link .banner-price{font-family: 'IBM Plex Sans KR Regular'; font-size: 20px; margin-left: 20px; margin-top: 40px;}
+#section-2 .sec2-head-wrap > #list-sub .banner .banner-link .banner-sale{color:#dd592d; font-family: 'IBM Plex Sans KR Regular'; font-size: 20px; margin-left: 20px; margin-top: 14px;}
+#section-2 .sec2-head-wrap > #list-sub .banner .menu-buy{position: absolute; right: 20px; bottom: 26px; display: flex; flex-direction: column; gap: 8px; justify-content: space-between;}
+#section-2 .sec2-head-wrap > #list-sub .banner .menu-buy a{background-color: #003942; border-radius: 50px; display: flex; justify-content: center; display: inline-block; width: 64px; text-align: center; height: 36px;}
+#section-2 .sec2-head-wrap > #list-sub .banner .menu-buy a img{margin-top: 3px;}
+
+
+
+
+
+
+/* white 영역 */
+.white{display: block; content: ""; width: 100%; min-height: 94px; box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.250);}
+
+
+
+/* =================================================
+footer 영역
+================================================= */
+
+
+
+#footer{background-color: #003942; padding-bottom: 51px;}
+#footer .foot-inner{/* max-width: 1920px; margin: 0 auto; */}
+
+/* foot-top 영역 */
+#footer .foot-inner .foot-top{padding-top: 23px; padding-left: 50px;}
+#footer .foot-inner .foot-top .foot-link{display: flex; gap: 40px; border-bottom: 1px solid #fff; padding-bottom: 23px; }
+#footer .foot-inner .foot-top .foot-link a{color: #fff; font-family: 'IBM Plex Sans KR SemiBold'; font-size: 16px;}
+#footer .foot-inner .foot-top .foot-link a:hover{color: #dd592d}
+
+/* foot-bottom 영역 */
+#footer .foot-inner .foot-bottom{margin-left: 50px; margin-top: 57px;}
+#footer .foot-inner .foot-bottom .foot-logo{display: inline-block; margin-bottom: 57px;}
+#footer .foot-inner .foot-bottom .foot-info-link .foot-link{display: flex; gap: 40px; }
+#footer .foot-inner .foot-bottom .copy{color: #fff; margin-top: 58px;}

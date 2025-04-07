@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+            /* 452 필터 선택자 */
+            $(function(){
+                /* 취득 */
+                /* console.log($('#site a:eq(1)').attr('class')) */
+                /* 변경 아래는 두 가지 방법 기재 */
+                $('#site>a:eq(0)').attr('href', 'https//www.daum.net').attr('target', '_blank')
+
+                $('#site>a:eq(1)').attr({ href : 'http://www.naver.com' , target : '_blank'})
+                $('#site a').eq(2).attr('href', 'https//www.nate.com')
+            })
+    </script>
+</head>
+<body>
+    <!-- 483 attribute(속성) -->
+     <div id="site">
+        <a href="#" target="_self" class="link1" title="다음 공식사이트로 이동합니다.">다음</a>
+        <a href="#" target="_self" class="link2" title="네이버 홈페이지로 이동">네이버</a>
+        <a href="#" target="_self" class="link3" title="네이트 공식홈페이지로 이동">네이트</a>
+     </div>
+</body>
+</html>

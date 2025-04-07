@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 한국토지주택공사 참고 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{font-size: 10px;}
+        
+        body{font-size: 1.6rem; line-height: 1.4; color: #333;}
+
+        *{margin: 0; padding: 0;}
+        
+        ul{list-style: none;}
+        
+        a{color: #333;}
+
+        .container{border: 1px solid red; width: 1400px; margin: 0 auto;}
+        .title2{font-size: 2.3rem; font-weight: bold;}
+
+        .visual{background-color: aqua; height: 800px;}
+
+        .sec1 .group{display: flex;}
+        .sec1 .group .notice{background-color: pink; width: 54.78571%; height: 49.7rem; padding: 2.9rem 3.8rem;}
+
+        .sec1 .notice_list{border: 1px solid blue; position: relative; padding-right: 3.4rem; text-align: right; margin-top: -2rem;} 
+
+        .sec1 .notice_list > li{border: 1px solid black; display: inline-block; padding: 0 1.6rem;}
+
+        .sec1 .notice_list > li > a{background-color: skyblue; position: relative; color: #464646;}
+        .sec1 .notice_list li.active > a{color: #000; font-weight: 700;}
+
+        .sec1 .notice_list > li > a::after { content: ""; position: absolute; left: 50%; bottom: -0.8rem; width: 0; height: 0; border-bottom: 3px solid red; transform: translateX(-50%); transition-property: width; transition-duration: 0.4s; }
+        .sec1 .notice_list > li.active > a::after { width: 100%; }
+
+        .sec1 .notice_list > li .notice_tab{position: absolute; top: 5rem; left: 0; display: none; background-color: springgreen;}
+        .sec1 .notice_list li.active .notice_tab{display: block;}
+
+        .sec1 .group .inform { width: calc(100% - 54.78571% - 2.7rem); background-color: lime; }
+    </style>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            
+            let list = $('.notice_list > li')
+
+            for (let i = 0; i < list.length; i++) {
+
+                if ( list.eq(i).hasClass('active') ) {
+                    list.eq(i).find('>a').attr('title', '활성화된 메뉴')
+                }else{
+                    list.eq(i).find('>a').attr('title', '비활성 메뉴')
+                }
+            }
+
+            $('.notice_list > li > a').on('click', function (e) {
+                e.preventDefault()
+                
+                let t = $(this)
+                
+                /* sibilings는 안적어도 되긴함. */
+                // t.closest('li').siblings('li').find(' > a ').attr('title', '비활성 메뉴')
+                // t.closest('li').addClass('active')
+                // t.closest('li').siblings().removeClass('active')
+
+                t.attr('title', '활성화된 메뉴').closest('li').addClass('active').siblings().removeClass('active').find('>a').attr('title', '비활성 메뉴');
+
+                
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <main id="main">
+            <section class="sec visual">
+                <h2>메인 비주얼 영역</h2>
+            </section>
+            <section class="sec sec1">
+                <h2>링크, 최신글(공지, 공모, 채용정보), 알림 배너존, 지역본부링크, 조직도 및 연락처 링크로 구성</h2>
+                <div class="container">
+                    <div class="group">
+                        <div class="notice">
+                            <h4 class="title">Notice</h4>
+                            <ul class="notice_list">
+                                <li class="active">
+                                    <a href="#">전체</a>
+                                    <div class="notice_tab">
+                                        <ul class="list">
+                                            <li>
+                                                <a href="#">
+                                                    <em>공모</em>
+                                                    <strong>[사전예고]도심 공공주택 복합사업 설계공모</strong>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">공지</a>
+                                    <div class="notice_tab">
+                                        <ul class="list">
+                                            <li>
+                                                <a href="#">
+                                                    <em>공지</em>
+                                                    <strong> LH홈페이지 개편 1주년 대국민 사용자 만족도 조사 이벤트 </strong>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">공모</a>
+                                    <div class="notice_tab">
+                                        <ul class="list">
+                                            <li>
+                                                <a href="#">
+                                                    <em>공모</em>
+                                                    <strong> 한국토지주택공사 소송대리인 공모 공고 </strong>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">채용정보</a>
+                                    <div class="notice_tab">
+                                        <ul class="list">
+                                            <li>
+                                                <a href="#">
+                                                    <em>채용</em>
+                                                    <strong> 한국토지주택공사(LH) 사내변호사 채용 및 합격자 발표 및 서류제출 </strong>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inform">알림과 콜센터</div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec sec2">
+                <h2>주요사업안내, 보도자료, 매거진, LHTV 링크로 구성</h2>
+            </section>
+            <section class="sec sec3">
+                <h3>국민과 함께 소통 하는 한국토지주택공사</h3>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

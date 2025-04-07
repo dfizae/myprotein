@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Protein</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="js/data.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header 부분 -->
+        <header id="header">
+            <h1 class="logo">MYPROTEIN</h1>
+            <div class="util-upper">
+                <ul class="upper">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">Q&A</a></li>
+                </ul>
+            </div>
+            <div class="util-icon">
+                <a href="#"><img src="img/ico-Delivery.png" alt="배송현황"></a>
+                <a href="#"><img src="img/ico-Shopping.png" alt="장바구니"></a>
+            </div>
+            <nav class="menu-wrap">
+                <ul class="menu">
+                    <li><a href="#">제품소개</a></li>
+                    <li>
+                        <a href="#">쇼핑몰</a>    
+                        <div class="quick-menu">
+                            <div class="in">
+                                <ul class="depth2">
+                                    <li class="item-1 item effect"><a href="#">단백질 보충제</a></li>
+                                    <li class="item-2 item effect"><a href="#">영양제·비타민</a></li>
+                                    <li class="item-3 item effect"><a href="#">프로틴 식품</a></li>
+                                    <li class="item-4 item effect"><a href="#">스포츠웨어</a></li>
+                                    <li class="item-5 item effect"><a href="#">보조제</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">비건</a></li>
+                    <li><a href="#">신제품</a></li>
+                    <li><a href="#">EVENT</a></li>
+                </ul>
+            </nav>
+            <div class="search-wrap">
+                <form action="#" method="post" class="search">
+                    <label for="검색창"></label>
+                    <input type="text" placeholder="# 블랙프라이데이 50% 특가">
+                    <button>버튼</button>
+                </form>
+            </div>
+        </header>
+        <!-- 진행중인 혜택 및 이벤트 부분 -->
+        <section id="section-1">
+            <div class="blankspace"></div>
+            <div class="sec-wrap">
+                <div class="sec-head-wrap">
+                    <h1 class="title">진행중인 혜택 및 이벤트</h1>
+                    <div class="more">
+                        <span>EVENT 더 알아보기</span>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="sec-option">
+                    <ul class="event">
+                        <li class="ad-1 effect"><a href="#"></a></li>
+                        <li class="ad-2 effect"><a href="#"></a></li>
+                    </ul>
+                    <div class="bonus">
+                        <ul class="bonus-1">
+                            <li class="effect">
+                                <h2>무료배송</h2>
+                                <p>8만원 이상 배송시<br>무료배송!</p>
+                               <!--  <img src="img/ico-free post.png" alt="무료배송 아이콘"> -->
+                            </li>
+                            <li class="effect">
+                                <h2>적립금 혜택</h2>
+                                <p>친구에게<br>고유 추천인 코드<br>쉐어 시<br>3,000원 적립!</p>
+                                <span></span>
+                            </li>
+                        </ul>
+                        <ul class="bonus-2">
+                            <li class="effect">
+                                <h2>앱 이용자 혜택</h2>
+                                <p>'마이프로틴'<br>앱 다운로드 후<br>고객에게<br>30% 할인 쿠폰 증정</p>
+                                <img src="img/ico-Medical_Mobile_App.png" alt="앱 이용자 혜택">
+                            </li>
+                            <li class="effect">
+                                <h2>블프 타임세일</h2>
+                                <p>지금 이메일을 등록하고<br>쇼핑지원금 12,000원과<br>놀라운 VIP 혜택을<br> 누리세요!</p>
+                                <img src="img/ico-VIP.png" alt="타임세일">
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <!-- 지금 가장 많이 담는 특가 부분 -->
+        <section id="section-2">
+            <div class="sec2-head-wrap">
+                <a href="#" class="sec2-head">
+                    <img src="img/ico-shopping_cart.png" alt="장바구니">
+                    <span>지금 가장 많이 담는 특가 ></span>
+                </a>
+                <p>블프 데이 최대 75% off + 할인코드 입력 시 추가 39% off <span>(할인코드:BF39)</span></p>
+                <ul id="list-main">
+                    <li><a href="#">단백질 보충제</a></li>
+                    <li><a href="#">운동전 부스터 & 아미노산</a></li>
+                    <li><a href="#">프로틴 스낵 & 건강식품</a></li>
+                    <li><a href="#">체중관리 보조식품</a></li>
+                    <li><a href="#">비타민 & 미네랄</a></li>
+                    <li><a href="#">스포츠 웨어</a></li>
+                </ul>
+                <ul id="list-sub">
+                    <li class="banner">
+                        <a href="#" class="banner-link">
+                            <img src="img/img-protein-1.png" alt="장바구니">
+                            <p class="banner-name">임팩트 웨이 프로틴</p>
+                            <p class="banner-ex">말왕 부스터 3개 이상 구매시 무료 기프트 증정!</p>
+                            <p class="banner-price">가격: 25,900원</p>
+                            <p class="banner-sale">할인: 20,000원</p>
+                        </a>
+                        <div class="menu-buy">
+                            <a href="https://www.myprotein.co.kr/my.basket"><img src="img/ico-Add_to_Shopping_Basket.png" alt="장바구니"></a>
+                            <a href="#"><img src="img/ico-Pay.png" alt="즉시구매"></a>
+                        </div>
+                    </li>   
+                    <li class="banner">
+                        <a href="#" class="banner-link">
+                            <img src="img/img-protein-2.png" alt="장바구니">
+                            <p class="banner-name">임팩트 웨이 아이솔레이트</p>
+                            <p class="banner-ex">말왕 부스터 3개 이상 구매시 무료 기프트 증정!</p>
+                            <p class="banner-price">가격: 44,900원</p>
+                            <p class="banner-sale">할인: 7,000원</p>
+                        </a>
+                        <div class="menu-buy">
+                            <a href="https://www.myprotein.co.kr/my.basket"><img src="img/ico-Add_to_Shopping_Basket.png" alt="장바구니"></a>
+                            <a href="#"><img src="img/ico-Pay.png" alt="즉시구매"></a>
+                        </div>
+                    </li>   
+                    <li class="banner">
+                        <a href="#" class="banner-link">
+                            <img src="img/img-protein-3.png" alt="장바구니">
+                            <p class="banner-name">클리어 웨이 프로틴 멜론소다</p>
+                            <p class="banner-ex">말왕 부스터 3개 이상 구매시 무료 기프트 증정!</p>
+                            <p class="banner-price">가격: 55,900원</p>
+                            <p class="banner-sale">할인: 2,000원</p>
+                        </a>
+                        <div class="menu-buy">
+                            <a href="https://www.myprotein.co.kr/my.basket"><img src="img/ico-Add_to_Shopping_Basket.png" alt="장바구니"></a>
+                            <a href="#"><img src="img/ico-Pay.png" alt="즉시구매"></a>
+                        </div>
+                    </li>   
+                    <li class="banner">
+                        <a href="#" class="banner-link">
+                            <img src="img/img-protein-4.png" alt="장바구니">
+                            <p class="banner-name">임팩트 웨이 프로틴 카페오레</p>
+                            <p class="banner-ex">말왕 부스터 3개 이상 구매시 무료 기프트 증정!</p>
+                            <p class="banner-price">가격: 25,900원</p>
+                            <p class="banner-sale">할인: 2,000원</p>
+                        </a>
+                        <div class="menu-buy">
+                            <a href="https://www.myprotein.co.kr/my.basket"><img src="img/ico-Add_to_Shopping_Basket.png" alt="장바구니"></a>
+                            <a href="#"><img src="img/ico-Pay.png" alt="즉시구매"></a>
+                        </div>
+                    </li>   
+                    <li class="banner">
+                        <a href="#" class="banner-link">
+                            <img src="img/img-protein-5.png" alt="장바구니">
+                            <p class="banner-name">임팩트 웨이 게이너</p>
+                            <p class="banner-ex">말왕 부스터 3개 이상 구매시 무료 기프트 증정!</p>
+                            <p class="banner-price">가격: 45,900원</p>
+                            <p class="banner-sale">할인: 12,000원</p>
+                        </a>
+                        <div class="menu-buy">
+                            <a href="https://www.myprotein.co.kr/my.basket"><img src="img/ico-Add_to_Shopping_Basket.png" alt="장바구니"></a>
+                            <a href="#"><img src="img/ico-Pay.png" alt="즉시구매"></a>
+                        </div>
+                    </li>   
+                </ul>
+            </div>
+        </section>
+        <!-- 공백 부분 -->
+        <div class="white"></div>
+        <!-- 푸터 부분  -->
+        <footer id="footer">
+            <div class="foot-inner">
+                <div class="foot-top">
+                    <div class="foot-link">
+                        <a href="#">이용안내</a>
+                        <a href="#">카테고리</a>
+                        <a href="#">개인정보 보호정책</a>
+                        <a href="#">공급업체 서약</a>
+                    </div>
+                </div>
+                <div class="foot-bottom">
+                    <a class="foot-logo" href="#" target="_blank"><img src="img/img-logo.png" alt="마이프로틴"></a>
+                    <div class="foot_info">
+                        <div class="foot-info-link">
+                            <a href="#"><img src="img/ico-TwitterX.png" alt="X"></a>
+                            <a href="https://www.instagram.com/myproteinkr/"><img src="img/ico-Instagram.png" alt="instagram"></a>
+                            <a href="https://www.facebook.com/MyproteinKR"><img src="img/ico-Facebook_F.png" alt="facebook"></a>
+                        </div>
+                        <p class="copy">
+                            2024 Myprotein.co.kr © The Hut.com Limited, a company registered in England and Wales (company number 05016010)<br>
+                            whose registered address is Voyager House, Chicago Avenue, Manchester Airport, M90 3DQ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{font-size: 16px;} 
+        body{}
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        .section-wrap .section{ border: 3px solid black; width: 100%; height: 50vh; }
+
+        .section2 .layout{ max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; border: 3px dashed green; }
+
+        .sec5-top{ background-color: aqua; display: flex; justify-content: space-between; }
+
+        .sec5-top > li{ border: 1px solid blue; }
+
+        .sec5-top .calender_w{ width: 325px; }
+        .sec5-top .popup_wrap{}
+        .sec5-top .right{ width: 325px; display: flex; flex-direction: column; }
+
+        .sec5-top .right > div{ border-radius: 10px 10px 0 30px; border: 1px solid #ddd; background-color: #fff; }
+
+        .notice-tab{display: flex; justify-content: space-between; background-color: #f4f4f4; border-bottom: 1px solid #ddd;}
+
+        .notice-tab a{border: 1px solid red; width: 33.333%; height: 50px; display: flex; justify-content: center; align-items: center; font-size: 16px; color: #666; position: relative; background-color: #f4f4f4;}
+
+        .notice-tab a.active{
+            border-radius: 10px 10px 0 0;
+            background-color: #0cafaf;
+            border-color: #0cafaf;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .notice-tab a.active::before{
+            content: '';
+            position: absolute; left: 50%; bottom: -13px;
+            transform: translateX(-50%);
+            border-top: 15px solid #0cafaf;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+        }
+
+        .notice-tab-content{display: none;}
+        .notice-tab-content.active{display: block;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.notice-tab a').on('click', function(e) {
+            e.preventDefault();
+            
+            let activeTab = $(this).attr('href')
+
+            $('.notice-tab a').removeClass('active')
+            // $(this).addClass('active')
+            // $(this).attr('title', '선택됨')
+
+            $(this).addClass('active').attr('title', '선택됨').siblings().attr('title', '')
+
+            $('.notice-tab-content').removeClass('active')
+            $(activeTab).addClass('active')
+            
+
+        })
+    })
+</script>
+
+</head>
+<body>
+    <!--  국립생태원 -->
+    <header class="header">헤더다</header>
+    <div class="setion-wrap" id="content">
+     <div class="section1 section" id="section1">메인비주얼영역</div>   
+     <div class="section2 section" id="section2">
+        <div class="layout">
+            <h2>알림홍보</h2>
+            <ul class="sec5-top">
+                <li class = "calender_w">국립생태원 관람안내 등</li>
+                <li class = "popup_wrap">팝업존</li>
+                <li class="right">
+                    <div class="photo-tab-wrap">이달의 생태, 생태영상</div>
+                    <div class="notice-tab-wrap">
+                        <div class="notice-tab">
+                            <a href=".notice1" class="active">공지사항</a>
+                            <a href=".notice2">채용소식</a>
+                            <a href=".notice3">보도자료</a>
+                        </div> <!-- notice-tab 끝 -->
+                        <div class="notice1 notice-tab-content active">공지사항내용여기에작성</div>
+                        <div class="notice2 notice-tab-content">채용소식내용여기에작성</div>
+                        <div class="notice3 notice-tab-content">보도자료내용여기에작성</div>
+                    </div> <!-- notice-tab-wrap 끝 -->
+                </li>
+            </ul>
+        </div>
+     </div>   
+    </div>
+</body>
+</html>

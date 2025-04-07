@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.box').eq(0).css('width', '200px')
+        
+            console.log($('.box').eq(0).css('width'))
+        
+            $('.box').eq(1).css('width', '300px')
+            $('.box').eq(1).css('height', '200px')
+
+            $('.box').eq(2).css({width: '400px', height: '300px', 'background-color' : 'pink'})
+            $('.box').eq(3).css({width: '400px', height: '300px', backgroundColor : 'lime'})/* 카멜 케이스, 언더바 사용이 불가능해서 대안으로 내놓은 방법 */
+            
+            let w = $('.box').eq(3).width()
+            let h = $('.box').eq(3).height()
+
+            let innerW = $('.box').eq(3).innerWidth()
+            let innerH = $('.box').eq(3).innerHeight()
+
+            let outerW = $('.box').eq(3).outerWidth()
+            let outerH = $('.box').eq(3).outerHeight()
+
+            let outerW2 = $('.box').eq(3).outerWidth(true)
+            let outerH2 = $('.box').eq(3).outerHeight(true)
+
+            console.log( '박스4의 너비는?' , w )
+            console.log( '박스4의 높이는?' , h )
+
+            console.log( '박스 4의 패딩을 포함한 너비는?', innerW)
+            console.log( '박스4의 패딩을 포함한 높이는?', innerH)
+
+            console.log( '박스 4의 패딩과 보더를 포함한 너비는?', outerW)
+            console.log( '박스4의 패딩과 보더를 포함한 높이는?', outerH)
+
+            console.log( '박스 4의 패딩과 보더, 마진까지를 포함한 너비는?', outerW2)
+            console.log( '박스4의 패딩과 보더, 마진까지를 포함한 높이는??', outerH2)
+        })
+    </script>
+    <style>
+        .box1,
+        .box2,
+        .box3,
+        .box4{border: 1px solid red}
+        .box4{padding: 20px; border: 5px solid blue; margin: 30px;}
+    </style>
+</head>
+<body>
+    <div class="box1 box" >박스1</div>
+    <div class="box2 box" >박스2</div>
+    <div class="box3 box" >박스3</div>
+    <div class="box4 box" >박스4</div>
+</body>
+</html>
