@@ -1,6 +1,6 @@
 # My protein 웹 사이트 리뉴얼
 * 작업기간: 2024.11 (14일 소요)
-* 코딩기간: 2024.11, 2025.03 (10일 소요)
+* 코딩기간: 2024.11, 2025.04 (15일 소요)
 * 주요역할: 기획, 디자인, 코딩
 * 기여도: 개인작업
 * 사용툴: ![Figma](https://github.com/user-attachments/assets/67394921-4b2e-4896-a94e-c3755396fe90) ![Visual Studio Code](https://github.com/user-attachments/assets/b8a57bc3-3529-4729-8782-6291feaae204) ![Photoshop](https://github.com/user-attachments/assets/2746db4e-38fb-43cd-87f9-2ca47e801e5f) ![Illustrator](https://github.com/user-attachments/assets/234addbe-17ab-48ce-b1ac-69bbf0db9f0b)
