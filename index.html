@@ -14,47 +14,101 @@
     <div class="wrap">
         <!-- header 부분 -->
         <header id="header">
-            <h1 class="logo">MYPROTEIN</h1>
-            <div class="util-upper">
-                <ul class="upper">
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">Q&A</a></li>
-                </ul>
+            <div class="inner">
+                <div class="head-util-wrap">
+                    <ul class="head-util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </ul>
+                </div>
+                <h1 class="head-logo"></h1>
+                <div class="search-wrap">
+                    <form action="#" class="search" method="post">
+                            <label for="search-tab"></label>
+                            <input type="search" id="search-tab" placeholder="# 마이프로틴 블랙프라이데이 기념 50% 특가" autocomplete="off">
+                            <label for="search-icon"></label>
+                            <input type="submit" id="search-icon">   
+                    </form>
+                </div>
+                <nav class="opt-wrap">
+                    <ul class="opt">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#" data-tab="tab-con2">쇼핑몰</a></li>
+                        <li><a href="#" data-tab="tab-con3">비건</a></li>
+                        <li><a href="#" >신제품</a></li>
+                        <li><a href="#" >EVENT</a></li>
+                    </ul>
+                </nav>
+                <ul class="head-util-second">
+                    <li><a href="#"><img src="img/ico-Delivery.png" alt="배송조회"></a></li>
+                    <li><a href="#"><img src="img/ico-Shopping.png" alt="장바구니"></a></li>
+                </ul> 
             </div>
-            <div class="util-icon">
-                <a href="#"><img src="img/ico-Delivery.png" alt="배송현황"></a>
-                <a href="#"><img src="img/ico-Shopping.png" alt="장바구니"></a>
-            </div>
-            <nav class="menu-wrap">
-                <ul class="menu">
-                    <li><a href="#">제품소개</a></li>
-                    <li>
-                        <a href="#">쇼핑몰</a>    
-                        <div class="quick-menu">
-                            <div class="in">
-                                <ul class="depth2">
-                                    <li class="item-1 item effect"><a href="#">단백질 보충제</a></li>
-                                    <li class="item-2 item effect"><a href="#">영양제·비타민</a></li>
-                                    <li class="item-3 item effect"><a href="#">프로틴 식품</a></li>
-                                    <li class="item-4 item effect"><a href="#">스포츠웨어</a></li>
-                                    <li class="item-5 item effect"><a href="#">보조제</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#">비건</a></li>
-                    <li><a href="#">신제품</a></li>
-                    <li><a href="#">EVENT</a></li>
-                </ul>
-            </nav>
-            <div class="search-wrap">
-                <form action="#" method="post" class="search">
-                    <label for="검색창"></label>
-                    <input type="text" placeholder="# 블랙프라이데이 50% 특가">
-                    <button>버튼</button>
-                </form>
+            <div class="opt-semi-wrap">
+                <div class="opt-semi">
+                    <ul class="opt-items" id="tab-con2">
+                        <li>
+                            <a href="#">
+                                <div class="item-1 item">
+                                    <span class="item-title">단백질 보충제</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item-2 item">
+                                    <span class="item-title">영양제·비타민</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item-3 item">
+                                    <span class="item-title">프로틴 식품</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item-4 item">
+                                    <span class="item-title">스포츠웨어</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item-5 item">
+                                    <span class="item-title">보조제</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="opt-items" id="tab-con3">
+                        <li>
+                            <a href="#">
+                                <div class="item-1 item">
+                                    <span class="item-title">비건용 제품</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item-2 item">
+                                    <span class="item-title">베지테리언</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item-3 item">
+                                    <span class="item-title">비건 간식·스낵</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <!-- 진행중인 혜택 및 이벤트 부분 -->
